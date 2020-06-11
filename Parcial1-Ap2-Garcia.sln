@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parcial1-Ap2-Garcia", "Parcial1-Ap2-Garcia.csproj", "{C99DC2F5-562D-4B90-A48C-2AE458F076BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parcial1-Ap2-Garcia", "Parcial1-Ap2-Garcia.csproj", "{C99DC2F5-562D-4B90-A48C-2AE458F076BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

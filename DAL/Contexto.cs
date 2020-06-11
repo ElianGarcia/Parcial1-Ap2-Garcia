@@ -9,7 +9,7 @@ namespace Parcial1_Ap2_Garcia.DAL
 {
     public class Contexto : DbContext
     {
-        DbSet<Articulos> articulos { get; set; }
+        public DbSet<Articulos> articulos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {

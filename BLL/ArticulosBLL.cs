@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Parcial1_Ap2_Garcia.DAL;
 using Parcial1_Ap2_Garcia.Models;
 using System;
 using System.Collections.Generic;
@@ -68,7 +69,7 @@ namespace Parcial1_Ap2_Garcia.BLL
 
             try
             {
-                encontrado = contexto.articulos.Any(e => e.ID = iD);
+                encontrado = contexto.articulos.Any(e => e.ID == iD);
             }
             catch (Exception)
             {
@@ -78,9 +79,11 @@ namespace Parcial1_Ap2_Garcia.BLL
             {
                 contexto.Dispose();
             }
+
+            return encontrado;
         }
 
-        private static bool Eliminar(int iD)
+        public static bool Eliminar(int iD)
         {
             bool eliminado = false;
             Contexto contexto = new Contexto();
