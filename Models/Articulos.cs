@@ -18,11 +18,11 @@ namespace Parcial1_Ap2_Garcia.Models
         [RegularExpression(@"\S(.*)\S", ErrorMessage = "Debe ser un texto.")]
         public string Descripcion { get; set; }
 
-        [Required(ErrorMessage = "")]
+        [Required(ErrorMessage = "El campo Existencia no puede estar vacío.")]
         [Range(0, 1000000, ErrorMessage = "El campo Existencia no puede ser menor que cero o mayor a 1000000.")]
-        public decimal Existencia { get; set; }
+        public int Existencia { get; set; }
 
-        [Required(ErrorMessage = "")]
+        [Required(ErrorMessage = "El campo Costo no puede estar vacío.")]
         [Range(0, 1000000, ErrorMessage = "El campo Costo no puede ser menor que cero o mayor a 1000000.")]
         public decimal Costo { get; set; }
 
@@ -39,9 +39,9 @@ namespace Parcial1_Ap2_Garcia.Models
             Inventario = 0;
         }
 
-        public Articulos(int ID, string descripcion, decimal existencia, decimal costo, decimal inventario)
+        public Articulos(int iD, string descripcion, int existencia, decimal costo, decimal inventario)
         {
-            ID = ID;
+            ID = iD;
             Descripcion = descripcion ?? throw new ArgumentNullException(nameof(descripcion));
             Existencia = existencia;
             Costo = costo;
