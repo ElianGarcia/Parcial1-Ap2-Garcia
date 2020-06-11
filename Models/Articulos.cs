@@ -11,7 +11,7 @@ namespace Parcial1_Ap2_Garcia.Models
         [Key]
         [Required(ErrorMessage = "El campo ID no puede estar vacío.")]
         [Range(0, 1000000, ErrorMessage = "El campo ID no puede ser menor que cero o mayor a 1000000.")]
-        public int PersonaID { get; set; }
+        public int ID { get; set; }
 
         [Required(ErrorMessage = "El campo Descripcion no puede estar vacío.")]
         [MinLength(3, ErrorMessage = "El Descripcion debe tener por lo menos 3 caracteres.")]
@@ -32,16 +32,16 @@ namespace Parcial1_Ap2_Garcia.Models
 
         public Articulos()
         {
-            PersonaID = 0;
+            ID = 0;
             Descripcion = string.Empty;
             Existencia = 0;
             Costo = 0;
             Inventario = 0;
         }
 
-        public Articulos(int personaID, string descripcion, decimal existencia, decimal costo, decimal inventario)
+        public Articulos(int ID, string descripcion, decimal existencia, decimal costo, decimal inventario)
         {
-            PersonaID = personaID;
+            ID = ID;
             Descripcion = descripcion ?? throw new ArgumentNullException(nameof(descripcion));
             Existencia = existencia;
             Costo = costo;
