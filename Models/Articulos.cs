@@ -10,7 +10,6 @@ namespace Parcial1_Ap2_Garcia.Models
     {
         [Key]
         [Required(ErrorMessage = "El campo ID no puede estar vacío.")]
-        [Range(0, 1000000, ErrorMessage = "El campo ID no puede ser menor que cero o mayor a 1000000.")]
         public int ID { get; set; }
 
         [Required(ErrorMessage = "El campo Descripcion no puede estar vacío.")]

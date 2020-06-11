@@ -30,13 +30,13 @@
 
             <div class="form-group">
                 <label for="Existencia">Existencia</label>
-                <InputNumber @bind-Value="articulo.Existencia" class="form-control"></InputNumber>
+                <InputNumber @bind-Value="articulo.Existencia" class="form-control" @onclick="CalcularTotalInventario"></InputNumber>
                 <ValidationMessage For="(() => articulo.Existencia)"></ValidationMessage>
             </div>
 
             <div class="form-group">
                 <label for="Costo">Costo</label>
-                <InputNumber @bind-Value="articulo.Costo" class="form-control"></InputNumber>
+                <InputNumber @bind-Value="articulo.Costo" class="form-control" @onclick="CalcularTotalInventario"></InputNumber>
                 <ValidationMessage For="(() => articulo.Costo)"></ValidationMessage>
             </div>
 
@@ -75,6 +75,15 @@
                 this.articulo = Encontrado;
             }
         }
+    }
+
+    private void CalcularTotalInventario()
+    {
+        if(articulo.Existencia > 0)
+            if(articulo.Costo > 0)
+            {
+                articulo.Inventario = Convert.ToDecimal(articulo.Existencia * articulo.Costo);
+            }
     }
 
     private void Nuevo()

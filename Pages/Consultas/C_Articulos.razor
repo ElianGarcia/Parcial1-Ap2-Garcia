@@ -74,10 +74,13 @@
     protected override void OnInitialized()
     {
         lista = new List<Articulos>();
+        TotalInventario = 0;
     }
 
     private void Buscar()
     {
+        TotalInventario = 0;
+
         try
         {
             if (Filtro == null)

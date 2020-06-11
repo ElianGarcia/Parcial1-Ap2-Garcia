@@ -21,11 +21,6 @@ namespace Parcial1_Ap2_Garcia.Migrations
                 {
                     table.PrimaryKey("PK_articulos", x => x.ID);
                 });
-
-            migrationBuilder.InsertData(
-                table: "articulos",
-                columns: new[] { "ID", "Costo", "Descripcion", "Existencia", "Inventario" },
-                values: new object[] { 1, 345.34m, "Mouse Inalambrico", 34, 11741.56m });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

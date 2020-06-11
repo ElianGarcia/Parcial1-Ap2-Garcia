@@ -37,16 +37,6 @@ namespace Parcial1_Ap2_Garcia.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("articulos");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 1,
-                            Costo = 345.34m,
-                            Descripcion = "Mouse Inalambrico",
-                            Existencia = 34,
-                            Inventario = 11741.56m
-                        });
                 });
 #pragma warning restore 612, 618
         }
