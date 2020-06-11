@@ -13,7 +13,7 @@ namespace Parcial1_Ap2_Garcia.BLL
     {
         public static bool Guardar(Articulos articulo)
         {
-            if (Existe(articulo.ID))
+            if (!Existe(articulo.ID))
                 return Insertar(articulo);
             else
                 return Modificar(articulo);
