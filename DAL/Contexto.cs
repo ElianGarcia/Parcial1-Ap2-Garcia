@@ -12,7 +12,7 @@ namespace Parcial1_Ap2_Garcia.DAL
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlite(@"DataSource= c:\Databases\Articulos_DB");
+            optionsBuilder.UseSqlite(@"DataSource= Data\Articulos_DB");
         }
 
         public DbSet<Articulos> articulos { get; set; }
